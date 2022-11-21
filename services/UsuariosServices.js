@@ -1,9 +1,22 @@
+const usuarios = require('../databases/usuarios.jason');
+
+
+
 function listar(){
-    // Seu código aqui
+    
+    const formaUsuario = usuario =>
+ {
+            return {
+                id: u.id,
+                nome: u.nome
+            }
+        }
+    ))
 }
 
 function salvar(arrayDeUsuarios){
-    // Seu código aqui
+    const fs = require('fs');
+    fs.writeFileSync ('./databases/usuarios.json', JSON,stringif(arrayDeUsuario, null, 4));
 }
 
 function cadastrar(objeto){
@@ -50,6 +63,7 @@ const UsuariosServices = {
     cadastrar,
     listar,
     detalhar,
+    salvar,
     remover,
     alterar,
     addEndereco,
